@@ -32,9 +32,9 @@ int autostop(char* command, char* regexp, int passes)
             {
                 if(passes <= 0)
                 {
-                kill(pid, SIGSTOP);
-                fgetc(stdin);
-                kill(pid, SIGCONT);
+                    kill(pid, SIGSTOP);
+                    fgetc(stdin);
+                    kill(pid, SIGCONT);
                 }
                 passes--;
             }
